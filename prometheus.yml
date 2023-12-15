@@ -1,0 +1,34 @@
+---
+global:
+  scrape_interval: 30s
+scrape_configs:
+  - job_name: apipagos
+    honor_labels: true
+    static_configs:
+      - targets:
+          - indie-world-api-pagos.vercel.app
+    metrics_path: /Devgram/APIPagos/1.0.0/metrics
+  - job_name: apiguardado
+    honor_labels: true
+    static_configs:
+      - targets:
+          - indie-world-api-guardado.vercel.app
+    metrics_path: /Devgram/APIGuardado/1.0.0/metrics
+  - job_name: apijuegos
+    honor_labels: true
+    static_configs:
+      - targets:
+          - indie-world-api-juegos.vercel.app
+    metrics_path: /Devgram/APIJuegos/1.0.0/metrics
+  - job_name: apiusuarios
+    honor_labels: true
+    static_configs:
+      - targets:
+          - indie-world-api-usuarios.vercel.app
+    metrics_path: /Devgram/APIUsuarios/1.0.0/metrics
+  - job_name: apireviews
+    honor_labels: true
+    static_configs:
+      - targets:
+          - indie-world-api-reviews.vercel.app
+    metrics_path: /Devgram/APIReviews/1.0.0/metrics
